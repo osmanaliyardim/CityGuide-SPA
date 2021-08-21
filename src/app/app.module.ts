@@ -6,17 +6,22 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ValueComponent } from './value/value.component';
 import { NavComponent } from './nav/nav.component';
+import { CityComponent } from './city/city.component';
+import { RouterModule } from '@angular/router';
+import { routes } from './routes.routing';
 
 @NgModule({
-  declarations: [		
+  declarations: [			
     AppComponent,
       ValueComponent,
-      NavComponent
+      NavComponent,
+      CityComponent
    ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule.forRoot(routes)
   ],
   providers: [],
   bootstrap: [AppComponent]
