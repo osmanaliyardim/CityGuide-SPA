@@ -9,13 +9,15 @@ import { NavComponent } from './nav/nav.component';
 import { CityComponent } from './city/city.component';
 import { RouterModule } from '@angular/router';
 import { routes } from './routes.routing';
+import { CityDetailComponent } from './city/city-detail/city-detail.component';
 
 @NgModule({
   declarations: [			
     AppComponent,
       ValueComponent,
       NavComponent,
-      CityComponent
+      CityComponent,
+      CityDetailComponent
    ],
   imports: [
     BrowserModule,
