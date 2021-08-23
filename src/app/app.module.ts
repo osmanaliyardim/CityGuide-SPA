@@ -11,6 +11,8 @@ import { RouterModule } from '@angular/router';
 import { routes } from './routes.routing';
 import { CityDetailComponent } from './city/city-detail/city-detail.component';
 import { NgxGalleryModule } from 'ngx-gallery-9';
+import { CityAddComponent } from './city/city-add/city-add.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [			
@@ -18,14 +20,16 @@ import { NgxGalleryModule } from 'ngx-gallery-9';
       ValueComponent,
       NavComponent,
       CityComponent,
-      CityDetailComponent
+      CityDetailComponent,
+      CityAddComponent
    ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     RouterModule.forRoot(routes),
-    NgxGalleryModule
+    NgxGalleryModule,
+    FormsModule, ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

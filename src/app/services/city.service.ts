@@ -25,4 +25,8 @@ export class CityService {
     return this.http.get<Photo[]>(this.path + "photos?cityId=" + cityId);
   }
 
+  add(city){
+    this.http.post(this.path + "add", city).subscribe();
+  }
+
 }
