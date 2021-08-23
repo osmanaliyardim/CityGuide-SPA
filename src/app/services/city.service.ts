@@ -18,11 +18,11 @@ export class CityService {
   }
 
   getCityById(cityId:number):Observable<City>{
-    return this.http.get<City>(this.path + "detail/?id=" + cityId);
+    return this.http.get<City>(this.path + "detail?cityId=" + cityId);
   }
 
   getPhotosByCity(cityId:number):Observable<Photo[]>{
-    return this.http.get<Photo[]>(this.path + "photos/?id=" + cityId);
+    return this.http.get<Photo[]>(this.path + "photos?cityId=" + cityId);
   }
 
 }
