@@ -50,6 +50,7 @@ export class AuthService {
 
   logOut(){
     localStorage.removeItem(this.TOKEN_KEY);
+    this.alertifyService.warning("Sistemden çıkış yaptınız!");
   }
 
   loggedIn(){
