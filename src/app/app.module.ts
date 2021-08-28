@@ -15,15 +15,18 @@ import { CityAddComponent } from './city/city-add/city-add.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AlertifyService } from './services/alertify.service';
 import { NgxEditorModule } from 'ngx-editor';
+import { PhotoComponent } from './photo/photo.component';
+import { AngularFileUploaderModule } from 'angular-file-uploader';
 
 @NgModule({
-  declarations: [			
+  declarations: [				
     AppComponent,
       ValueComponent,
       NavComponent,
       CityComponent,
       CityDetailComponent,
-      CityAddComponent
+      CityAddComponent,
+      PhotoComponent
    ],
   imports: [
     BrowserModule,
@@ -32,7 +35,8 @@ import { NgxEditorModule } from 'ngx-editor';
     RouterModule.forRoot(routes),
     NgxGalleryModule,
     FormsModule, ReactiveFormsModule,
-    NgxEditorModule
+    NgxEditorModule,
+    AngularFileUploaderModule
   ],
   providers: [AlertifyService],
   bootstrap: [AppComponent]
