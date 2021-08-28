@@ -14,6 +14,7 @@ import { NgxGalleryModule } from 'ngx-gallery-9';
 import { CityAddComponent } from './city/city-add/city-add.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AlertifyService } from './services/alertify.service';
+import { NgxEditorModule } from 'ngx-editor';
 
 @NgModule({
   declarations: [			
@@ -30,7 +31,8 @@ import { AlertifyService } from './services/alertify.service';
     HttpClientModule,
     RouterModule.forRoot(routes),
     NgxGalleryModule,
-    FormsModule, ReactiveFormsModule
+    FormsModule, ReactiveFormsModule,
+    NgxEditorModule
   ],
   providers: [AlertifyService],
   bootstrap: [AppComponent]
