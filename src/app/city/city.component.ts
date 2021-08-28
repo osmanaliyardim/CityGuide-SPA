@@ -13,7 +13,6 @@ export class CityComponent implements OnInit {
   constructor(private cityService:CityService) { }
 
   cities:City[]
-
   ngOnInit() {
     this.cityService.getCities().subscribe(data =>{
       this.cities = data;

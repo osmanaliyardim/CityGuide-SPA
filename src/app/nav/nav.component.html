@@ -17,9 +17,10 @@
           <a class="nav-link active" routerLink="value" routerLinkActive="active">Values</a>
         </li>
       </ul>
-      <form class="d-flex">
-        <input class="form-control me-sm-2" type="text" placeholder="Search">
-        <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+      <form *ngIf="isAuthenticated" #loginForm="ngForm" (ngSubmit)="login()" class="d-flex">
+        <input class="form-control me-sm-2" name="userName" id="userName" [(ngModel)]="loginUser.userName" type="text" placeholder="User Name" required>
+        <input class="form-control me-sm-2" name="password" id="password" [(ngModel)]="loginUser.password" type="password" placeholder="Password" required>
+        <button class="btn btn-secondary my-2 my-sm-0" [disabled]="!loginForm.valid" type="submit">Login</button>
       </form>
     </div>
   </div>

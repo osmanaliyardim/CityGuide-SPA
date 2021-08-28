@@ -5,24 +5,32 @@
         <h2 class="mt-3 pt-3">Add a new city</h2>
         <div class="form-group">
           <input type="text" id="name" formControlName="name" class="form-control" placeholder="City Name" autofocus>
-          <span class="help-block"
+          <br>
+          <span class="help-block alert alert-danger"
             *ngIf="cityAddForm.get('name').hasError('required') &&  cityAddForm.get('name').touched">
             City name is obligated (REQUIRED)!
           </span>
         </div>
+        <br>
         <div class="form-group">
           <input type="text" id="description" formControlName="description" class="form-control"
             placeholder="City Description" autofocus>
-          <span class="help-block"
+            <br>
+          <span class="help-block alert alert-danger"
             *ngIf="cityAddForm.get('description').hasError('required') &&  cityAddForm.get('description').touched">
             City description is obligated (REQUIRED)!
           </span>
         </div>
+        <br>
         <button type="submit" class="btn btn-lg btn-success btn-block" [disabled]="!cityAddForm.valid">SAVE</button>
 
         <br>
-        <h5>{{cityAddForm.value | json}}</h5>
-        <h5>{{cityAddForm.status | json}}</h5>
+        <br>
+        <h5 *ngIf="cityAddForm.status == 'INVALID'" style="float:right;">Form Status: <span class="alert alert-warning">{{cityAddForm.status}}</span></h5>
+        <h5 *ngIf="cityAddForm.status == 'VALID'" style="float:right;">Form Status: <span class="alert alert-success">{{cityAddForm.status}}</span></h5>
+        <br>
+        <br>
+        <h5 style="float:right;">{{cityAddForm.value | json}}</h5>
       </form>
     </div>
   </div>
